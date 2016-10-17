@@ -1,6 +1,9 @@
 function logger(request, response, next){
-  console.log('Logging!');
+  var requestDate = new Date();
+  var requestMethod = request.method;
+  var requestURL = request.url;
+  console.log(requestDate, requestMethod, requestURL);
   next();
 }
 
-modules.exports = logger;
+module.exports = logger;

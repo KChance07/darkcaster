@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Darkcaster</title>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </head>
-    <body>
-      I like cheese
-    </body>
-  </html>
+<html lang="en" ng-app='ngWeather'>
+<head>
+  <meta charset="UTF-8">
+  <title>ngWeather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div ng-view></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/controllers/SimpleController.js"></script>
+  <script src="js/controllers/HomeController.js"></script>
+  <script src="js/controllers/MinutelyController.js"></script>
+  <script src="js/controllers/HourlyController.js"></script>
+  <script src="js/controllers/DailyController.js"></script>
+  <script src="js/services/WeatherService.js"></script>
+</body>
+</html>

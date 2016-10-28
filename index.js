@@ -15,8 +15,6 @@ server.use(cors());
 server.use(indexRouter);
 server.use(forecastRouter);
 
-
-
 server.listen(port, function(){
   console.log('Now listening on port', port);
 });

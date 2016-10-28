@@ -12,4 +12,4 @@ function authorize(request, response, next){
     }
 }
 
-module.exports = authorize;
+module.exports = authorize; //<--pulled from NG

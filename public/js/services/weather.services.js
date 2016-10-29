@@ -16,8 +16,14 @@
       getWeather: getWeather
     };
 
-    function getWeather(){
-      return $http.get('/forecast/29,-82');
+    function getWeather(latitude, longitude){
+      latitude = latitude;
+      longitude = longitude;
+      var config = {
+        headers: secretToken
+      };
+      var url = '/forecast'+ latitude + ',' + longitude;
+      return $http.get(url, config);
     }
   }
 }());

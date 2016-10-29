@@ -1,4 +1,3 @@
-
 var mySecretPhrase = process.env.PASS || require('../config.js').secretPassphrase;
 
 function authorize(request, response, next){
@@ -12,4 +11,4 @@ function authorize(request, response, next){
     }
 }
 
-module.exports = authorize; //<--pulled from NG
+module.exports = authorize;

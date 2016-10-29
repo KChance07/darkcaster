@@ -2,13 +2,16 @@
   angular.module('forecast-app')
     .controller("HomeController", HomeController);
 
-    HomeController.$inject = ['$scope'];
+    HomeController.$inject = ['$scope', 'WeatherService'];
 
-    function HomeController($scope)($scope, WeatherService){
+    function HomeController($scope, WeatherService){
       $scope.getWeather = getWeather;
 
       function getWeather(latitude, longitude){
-        console.log(WeatherService.getWeather());
+        WeatherService.getWeather(latitude, longitude)
+        .then(function(response){
+          debugger;
+        })
       }
     }
 }());

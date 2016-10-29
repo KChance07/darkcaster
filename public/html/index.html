@@ -12,14 +12,32 @@
       <input type="test" ng-model='latitude' placeholder="Latitude">
       <input type="text" ng-model='longitude' placeholder="Longitude">
       <button ng-click='getWeather(latitude, longitude)'>Get the Weather</button>
+      <div ng-show='weather.currently'>
+        <div class="row">
+          <div class="col-md-1">
+          <img ng-source="images/{{weather.currently.icon}}.png"
+          class = 'img-responsive' alt="{{weather.currently.icon}}">
+        </div>
+          <div class="col-md-9"></div>
+            <h3>{{ weather.currently.summary }}</h3>
+          <div class="col-md-2"></div>
+            <strong>{{ weather.currently.time * 1000 | date:"short"}}</strong>
+        </div class="row">
+          <div class="row"></div>
+          <div class="col-md-3">
+            <p>Temperature: {{weather.currently.temperature | number:0 }} &deg;F</p>
+          </div>
+
+          <div class="col-md-3 col-md-offset-6">precip</div>
+            <p>Precipitation Probability: {{ weather.currently.precipProbability * 100 | number:0 }}%</p>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"</script>
   <script src='js/app.js'></script>
-  <script src="js/controllers/home.controller.js"</script>
-  <script src="js/services/weather.service.js"</script>
-
-
+  <script src="js/controllers/home.controller.js"></script>
+  <script src="js/services/weather.services.js"></script>
   <!-- <div ng-view></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>

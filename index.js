@@ -6,7 +6,7 @@ var authorize = require('./middleware/auth.js')
 
 var forecastRouter = require('./routers/forecast.router.js');
 var indexRouter = require('./routers/index.router.js');
-var port = process.env.PORT || 8081;
+var port = process.env.PORT || 8080;
 
 server.use(express.static(__dirname + '/public'));
 server.use(logger);
